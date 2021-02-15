@@ -43,8 +43,8 @@ body.dark {
 }
 
 .logo {
-  height: 75px;
-  background-color: rgb(75, 23, 219);
+  height: 120px;
+  /* background-color: rgb(75, 23, 219); */
   border-radius: 5px;
 }
 
