@@ -2,13 +2,17 @@ html, body, * {
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
+  font-family: Arial, sans-serif;
 }
 
 body.light {
-  --h1: black;
+  --h1: white;
+  --h2: white;
+  --header: rgb(112, 73, 219);
 
+  --headingFont: 'Bebas Neue', cursive;
 
-  background-color: #EEEEEE;
+  background-color: white;
 }
 
 body.dark {
@@ -24,13 +28,48 @@ body.dark {
   display: flex;
   justify-content: center;
   width: 100%;
+  background-color: var(--header);
 }
 
 .header {
   max-width: 1000px;
   width: 100%;
   display: flex;
-  
+  height: min-content;
+  padding: 0px 15px 0px 15px;
+  height: 100px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  height: 75px;
+  background-color: rgb(75, 23, 219);
+  border-radius: 5px;
+}
+
+.headingContainer {
+  margin-left: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+}
+
+.headingContainer h1 {
+  font-size: 2.5rem;
+  color: var(--h1);
+  text-shadow: 1px 1px 1px black;
+  font-family: var(--headingFont);
+}
+
+.headingContainer h2 {
+  margin-top: -13px;
+  font-size: 1.9rem;
+  font-family: var(--headingFont);
+  color: var(--h2);
+  text-shadow: 1px 1px 1px black;
 }
 
 /* Header -> Switch */
@@ -58,7 +97,7 @@ body.dark {
   right: 0;
   left: 0;
   transition: 0.4s;
-  background-color: gray;
+  background-color: rgb(253, 253, 253);
   border-radius: 34px;
 }
 
@@ -66,7 +105,7 @@ body.dark {
   content: "";
   height: 25px;
   width: 25px;
-  background-color: blue;
+  background-color: var(--header);
   transition: 0.4s;
   border-radius: 50%;
   position: absolute;
