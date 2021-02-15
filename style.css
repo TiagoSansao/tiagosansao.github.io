@@ -6,12 +6,34 @@ html, body, * {
 
 body.light {
   --h1: black;
+
+
+  background-color: #EEEEEE;
 }
 
 body.dark {
-  -h1: white;
+  --h1: white;
+
+  background-color: rgb(34, 30, 30);
 }
 
+
+/* Header */
+
+.lHeader {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.header {
+  max-width: 1000px;
+  width: 100%;
+  display: flex;
+  
+}
+
+/* Header -> Switch */
 
 .switchContainer {
 
