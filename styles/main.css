@@ -1,0 +1,52 @@
+.lMain {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.main {
+  max-width: 1000px;
+  width: 100%;
+  padding: 15px;
+  
+}
+
+#introduction {
+  display: flex;
+  background-color: var(--secondary-bg);
+  border-radius: 20px;
+}
+
+#introduction > div {
+  padding: 15px;
+}
+
+#introduction > div > * {
+  margin: 5px 0px 5px 0px;
+}
+
+#introduction h3 {
+  margin-bottom: 5px;
+  font-size: 1.6rem;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+  color: var(--p-color);
+}
+
+#introduction p {
+  text-align: justify;
+  color: var(--p-color);
+  font-size: 1.22rem;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400;
+
+}
+
+.photo {
+  width: 300px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 20px 0px 0px 20px;
+  position: relative;
+  border: 15px solid var(--frame);
+}

@@ -1,0 +1,31 @@
+html, body, * {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  font-family: Arial, sans-serif;
+  text-decoration: none;
+}
+
+body {
+  padding-top: 100px;
+}
+
+body.light {
+  --h1: white;
+  --h2: white;
+  --nav: rgb(219, 219, 219);
+  --header: rgb(135, 92, 255);
+  --p-color: black;
+  --secondary-bg: #929292;
+  --frame: rgb(78, 78, 78);
+
+  --headingFont: 'Bebas Neue', cursive;
+
+  background-color: white;
+}
+
+body.dark {
+  --h1: white;
+
+  background-color: rgb(34, 30, 30);
+}
