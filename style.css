@@ -155,6 +155,12 @@ input:checked + .slider::before {
 
 .introduction h3 {
   margin-bottom: 10px;
+  font-size: 1.6rem;
+}
+
+.introduction p {
+  color: black;
+  font-size: 1.2rem;
 }
 
 .photo {
