@@ -9,6 +9,7 @@ html, body, * {
 body.light {
   --h1: white;
   --h2: white;
+  --nav: rgb(219, 219, 219);
   --header: rgb(135, 92, 255);
   --p-color: black;
   --secondary-bg: #929292;
@@ -75,6 +76,25 @@ body.dark {
   font-family: var(--headingFont);
   color: var(--h2);
   text-shadow: 1px 1px 1px black;
+}
+
+.headerNav {
+  display: flex;
+  font-size: 1.4rem;
+}
+
+.headerNav a {
+  padding: 5px 10px 5px 10px;
+  color: var(--nav);
+  font-weight: 600;
+  font-family: 'Quicksand', sans-serif;
+  transition: margin 500ms;
+  text-shadow: 1px 1px 1px black;
+}
+
+.headerNav a:hover {
+  margin-top: -5px;
+  border-bottom: 3px solid rgb(110, 38, 204);
 }
 
 /* Header -> Switch */
