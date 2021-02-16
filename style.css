@@ -10,6 +10,8 @@ body.light {
   --h1: white;
   --h2: white;
   --header: rgb(135, 92, 255);
+  --p-color: black;
+  --secondary-bg: #929292;
 
   --headingFont: 'Bebas Neue', cursive;
 
@@ -141,7 +143,7 @@ input:checked + .slider::before {
 
 .introduction {
   display: flex;
-  background-color: #929292;
+  background-color: var(--secondary-bg);
   border-radius: 20px;
 }
 
@@ -154,18 +156,30 @@ input:checked + .slider::before {
 }
 
 .introduction h3 {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   font-size: 1.6rem;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+  color: var(--p-color);
 }
 
 .introduction p {
-  color: black;
-  font-size: 1.2rem;
+  text-align: justify;
+  color: var(--p-color);
+  font-size: 1.22rem;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400;
+
 }
 
 .photo {
   width: 300px;
   height: auto;
-  border-radius: 20px;
+  object-fit: cover;
+  border-radius: 20px 0px 0px 20px;
   position: relative;
+}
+
+@media (max-width: 850px) {
+  
 }
