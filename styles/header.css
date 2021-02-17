@@ -148,11 +148,21 @@ input:checked + .slider::before {
   padding: 3px;
   margin: 5px 0px 5px;
   border-bottom: 1px solid black;
+  color: black;
 }
 
 .menuAside.open {
   display: flex;
 }
+
+.fullscreen {
+  position: absolute;
+  width: 100vh;
+  height: 100vw;
+  background-color: red;
+}
+
+
 
 .menuHeader {
   display: grid;
