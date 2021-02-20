@@ -1,9 +1,11 @@
 // Dark theme
 
-const darkInput = document.querySelector("input#checkbox");
-darkInput.addEventListener("change", () => {
-  document.body.classList.toggle("light");
-  document.body.classList.toggle("dark");
+const darkInput = document.querySelectorAll(".checkbox");
+[...darkInput].map((element) => {
+  element.addEventListener("change", () => {
+    document.body.classList.toggle("light");
+    document.body.classList.toggle("dark");
+  });
 });
 
 // Navbar menu
@@ -21,7 +23,6 @@ closeButton.addEventListener("click", () => {
 });
 
 window.addEventListener("click", (event) => {
-  console.log(event.target.matches('.menuButton'));
   if (!event.target.matches('.menuButton')) {
     document.querySelector(".menuAside").classList.remove("open");
     document.body.classList.remove("shadowed");

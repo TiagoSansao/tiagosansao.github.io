@@ -27,8 +27,17 @@ body.light {
 
 body.dark {
   --h1: white;
+  --h2: white;
+  --nav: rgb(219, 219, 219);
+  --header: #252a34;
+  --p-color: white;
+  --secondary-bg: #4b09a0;
+  --frame: #5206b4;
+  --menu-bg-color: #252a34;
 
-  background-color: rgb(34, 30, 30);
+  --headingFont: 'Bebas Neue', cursive;
+
+  background-color: #1D1D1D
 }
 
 body::after {
