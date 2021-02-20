@@ -125,7 +125,7 @@
 }
 
 input:checked + .slider {
-  background-color: #252a34;
+  background-color: white;
 }
 
 input:checked + .slider::before {
