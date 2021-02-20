@@ -2,7 +2,7 @@ html, body, * {
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
-  font-family: Arial, sans-serif;
+  font-family: 'Quicksand', sans-serif;
   text-decoration: none;
 }
 
@@ -17,6 +17,7 @@ body.light {
   --nav: rgb(219, 219, 219);
   --header: rgb(135, 92, 255);
   --p-color: black;
+  --menu-color: white;
   --secondary-bg: #929292;
   --frame: rgb(78, 78, 78);
   --menu-bg-color: #252a34;
@@ -32,6 +33,7 @@ body.dark {
   --nav: rgb(219, 219, 219);
   --header: #252a34;
   --p-color: white;
+  --menu-color: white;
   --secondary-bg: #4b09a0;
   --frame: #5206b4;
   --menu-bg-color: #252a34;

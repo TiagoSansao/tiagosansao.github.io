@@ -17,8 +17,29 @@
   padding: 3px;
   margin: 5px 0px 5px;
   border-bottom: 1px solid gray;
-  color: var(--p-color);
+  color: var(--menu-color);
   margin: 10px;
+}
+
+.menuAside .switchContainer2 {
+  margin-top: 10px;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.switchContainer2 span {
+  margin-top: 5px;
+  color: var(--menu-color);
+}
+
+span .on {
+  color: green;
+}
+
+span .off {
+  color: red;
 }
 
 .menuAside.open {
