@@ -1,6 +1,6 @@
 // Dark theme
 
-let theme = localStorage.getItem('theme');
+let theme = localStorage.getItem('theme-ts');
 theme === null ? theme = "dark" : "";
 document.body.classList.add(theme);
 
@@ -8,8 +8,8 @@ const darkInput = document.querySelectorAll(".checkbox");
 [...darkInput].map((element) => {
   element.addEventListener("change", () => {
     document.body.classList.toggle("light");
-    document.body.classList.toggle("dark");
-   localStorage.setItem('theme', document.body.classList[0]);
+    let isDark = document.body.classList.toggle("dark");
+   localStorage.setItem('theme-ts', isDark ? "dark" : "light");
   });
 });
 
