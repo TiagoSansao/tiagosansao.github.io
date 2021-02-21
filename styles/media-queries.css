@@ -41,6 +41,7 @@
   }
   .headingContainer h2 {
     font-size: 1.55rem;
+    margin-top: -9px;
   }
   .logo {
     height: 90px;
@@ -83,6 +84,13 @@
     padding-top: 70px;
   }
   .menuButton {
+    width: 30px;
+  }
+
+  .technology {
+    flex-direction: column;
+  }
+  .technology img {
     width: 30px;
   }
 }

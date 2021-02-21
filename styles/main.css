@@ -82,6 +82,9 @@
 .technology {
   display: flex;
   padding: 10px;
+  animation-name: leftToRight;
+  animation-duration: 500ms;
+  animation-timing-function: ease;
 }
 
 .technology > div {
@@ -97,4 +100,8 @@
 
 .technology img {
   width: 100px;
+}
+
+@keyframes leftToRight {
+  0% { margin-left: -98% }
 }
