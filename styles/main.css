@@ -11,6 +11,8 @@
   
 }
 
+/* Introduction */
+
 #introduction {
   display: flex;
   background-color: var(--secondary-bg);
@@ -49,4 +51,40 @@
   border-radius: 20px 0px 0px 20px;
   position: relative;
   border: 15px solid var(--frame);
+}
+
+/* Skills */
+
+.skills {
+  margin-top: 200px;
+}
+
+.skill {
+  margin-top: 100px;
+}
+
+.skill h3 {
+  color: rgb(185, 8, 176);
+  font-size: 2rem;
+  margin-left: 30px;
+}
+
+.technology {
+  display: flex;
+  padding: 10px;
+}
+
+.technology > div {
+  margin-left: 10px;
+  color: var(--p-color);
+}
+
+.technology h4 {
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+  color: orange;
+}
+
+.technology img {
+  width: 100px;
 }

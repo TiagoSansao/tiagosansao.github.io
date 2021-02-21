@@ -6,6 +6,10 @@ html, body, * {
   text-decoration: none;
 }
 
+html {
+  scroll-behavior:  smooth;
+}
+
 body {
   padding-top: 100px;
   overflow-x: hidden;
@@ -60,5 +64,21 @@ body.shadowed::after {
   transition-duration: 200ms;
   transition-property: opacity;
   opacity: 1;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #26292c;
+}
+
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #393b3d;
 }
 
