@@ -56,17 +56,27 @@
 /* Skills */
 
 .skills {
-  margin-top: 200px;
+  margin-top: 50px;
+  border-top: 1px solid rgb(53, 52, 52);
+}
+
+.skills h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-top: 20px;
+  color: var(--p-color);
 }
 
 .skill {
-  margin-top: 100px;
+  margin-top: 25px;
+  border-bottom: 1px dashed gray;
+  padding-bottom: 25px;
 }
 
 .skill h3 {
   color: rgb(185, 8, 176);
   font-size: 2rem;
-  margin-left: 30px;
+  
 }
 
 .technology {
