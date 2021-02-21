@@ -89,9 +89,18 @@
 
   .technology {
     flex-direction: column;
+    padding: 10px 3px 10px 3px;
+  }
+  .technology p {
+    margin-left: 0px;
   }
   .technology img {
     width: 30px;
+    margin-bottom: -30px;
+    margin-left: 10px;
+  }
+  .technology h4 {
+    margin-left: 40px;
   }
 }
 
