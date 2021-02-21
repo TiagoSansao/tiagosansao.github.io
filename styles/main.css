@@ -85,6 +85,7 @@
   animation-name: leftToRight;
   animation-duration: 500ms;
   animation-timing-function: ease;
+  text-align: justify;
 }
 
 .technology > div {
