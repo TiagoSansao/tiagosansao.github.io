@@ -43,15 +43,21 @@ window.addEventListener("click", (event) => {
 
 // Animate when it's in viewport 
 
-const skills = document.querySelector(".technology");
+const skills = document.querySelectorAll(".technology");
 
-function isVisible() {
+function checkIfElementIsInViewport() {
   const windowHeight = window.innerHeight;
   const scrollY = window.scrollY || window.pageYOffset;
+  const scrollPosition = scrollY + windowHeight;
+  skills.forEach((element) => {
+    const elPosition = element.getBoundingClientRect().top + scrollY  + element.clientHeight;
+    if (scrollPosition > elPosition) {
+      element.classList.add('animated');
+    }
+    return false;
+  });
 }
 
-function animate() {
-  console.log(window.innerHeight);
-}
 
-document.addEventListener("scroll", animate);
+document.addEventListener("scroll", checkIfElementIsInViewport);
+checkIfElementIsInViewport();

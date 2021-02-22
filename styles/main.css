@@ -81,11 +81,13 @@
 
 .technology {
   display: flex;
+  opacity: 0;
   padding: 10px;
   text-align: justify;
 }
 
 .technology.animated {
+  opacity: 1;
   animation-name: leftToRight;
   animation-duration: 500ms;
   animation-timing-function: ease;
