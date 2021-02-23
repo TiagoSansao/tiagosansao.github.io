@@ -40,3 +40,18 @@ window.addEventListener("click", (event) => {
     document.body.classList.remove("shadowed");
   }
 });
+
+// Animate when it's in viewport 
+
+const skills = document.querySelector(".technology");
+
+function isVisible() {
+  const windowHeight = window.innerHeight;
+  const scrollY = window.scrollY || window.pageYOffset;
+}
+
+function animate() {
+  console.log(window.innerHeight);
+}
+
+document.addEventListener("scroll", animate);

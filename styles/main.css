@@ -82,10 +82,13 @@
 .technology {
   display: flex;
   padding: 10px;
+  text-align: justify;
+}
+
+.technology.animated {
   animation-name: leftToRight;
   animation-duration: 500ms;
   animation-timing-function: ease;
-  text-align: justify;
 }
 
 .technology > div {
