@@ -1,84 +1,101 @@
 // Dark theme
 
-const darkState = document.querySelectorAll(".dark-state");
+const darkState = document.querySelectorAll('.dark-state');
 let theme = localStorage.getItem('theme-ts');
-theme === null ? theme = "dark" : "";
+theme === null ? (theme = 'dark') : '';
 document.body.classList.add(theme);
 darkState.forEach((element) => {
-  element.innerHTML = theme === "dark" ? "<span class='on'>ON</span>" : "<span class='off'>OFF</span>";
+  element.innerHTML =
+    theme === 'dark'
+      ? "<span class='on'>ON</span>"
+      : "<span class='off'>OFF</span>";
 });
 
-const darkInput = document.querySelectorAll(".checkbox");
+const darkInput = document.querySelectorAll('.checkbox');
 [...darkInput].map((element) => {
-  element.addEventListener("change", () => {
-    document.body.classList.toggle("light");
-    let isDark = document.body.classList.toggle("dark");
+  element.addEventListener('change', () => {
+    document.body.classList.toggle('light');
+    let isDark = document.body.classList.toggle('dark');
     darkState.forEach((element) => {
-      element.innerHTML = isDark ? "<span class='on'>ON</span>" : "<span class='off'>OFF</span>";
+      element.innerHTML = isDark
+        ? "<span class='on'>ON</span>"
+        : "<span class='off'>OFF</span>";
     });
-   localStorage.setItem('theme-ts', isDark ? "dark" : "light");
+    localStorage.setItem('theme-ts', isDark ? 'dark' : 'light');
   });
 });
 
 // Navbar menu
 
-const menuButton = document.querySelector(".menuButton");
-menuButton.addEventListener("click", () => {
-  document.querySelector(".menuAside").classList.toggle("open")
-  document.body.classList.toggle("shadowed");
+const menuButton = document.querySelector('.menuButton');
+menuButton.addEventListener('click', () => {
+  document.querySelector('.menuAside').classList.toggle('open');
+  document.body.classList.toggle('shadowed');
 });
 
-const closeButton = document.querySelector(".closeButton");
-closeButton.addEventListener("click", () => {
-  document.querySelector(".menuAside").classList.remove("open");
-  document.body.classList.remove("shadowed");
+const closeButton = document.querySelector('.closeButton');
+closeButton.addEventListener('click', () => {
+  document.querySelector('.menuAside').classList.remove('open');
+  document.body.classList.remove('shadowed');
 });
 
-window.addEventListener("click", (event) => {
+window.addEventListener('click', (event) => {
   if (!event.target.matches('.menuButton')) {
-    document.querySelector(".menuAside").classList.remove("open");
-    document.body.classList.remove("shadowed");
+    document.querySelector('.menuAside').classList.remove('open');
+    document.body.classList.remove('shadowed');
   }
 });
 
-// Animate when it's in viewport 
+// Animate when it's in viewport
 
-const skills = document.querySelectorAll(".technology");
-const navItems = document.querySelectorAll(".headerNav>a")
-const menuNavItems = document.querySelectorAll(".menuAside>a")
+const skills = document.querySelectorAll('.technology');
+const navItems = document.querySelectorAll('.headerNav>a');
+const menuNavItems = document.querySelectorAll('.menuAside>a');
 let navSectionArr = [];
 
 navItems.forEach((element) => {
-  const navHrefElement = document.querySelector(element.getAttribute("href"));
-  navSectionArr.push([navHrefElement, element])
+  const navHrefElement = document.querySelector(element.getAttribute('href'));
+  navSectionArr.push([navHrefElement, element]);
 });
 
 menuNavItems.forEach((element, index) => {
   navSectionArr[index].push(element);
 });
 
-
-let before = [-1, null]
+let before = [-1, null];
 
 function checkIfElementIsInViewport() {
+  // Animation block
+
   const windowHeight = window.innerHeight;
   const scrollY = window.scrollY || window.pageYOffset;
   const scrollPosition = scrollY + windowHeight;
 
   skills.forEach((element) => {
-    const elPosition = element.getBoundingClientRect().top + scrollY  + element.clientHeight;
+    const elPosition =
+      element.getBoundingClientRect().top + scrollY + element.clientHeight;
     if (scrollPosition > elPosition) {
       element.classList.add('animated');
     }
   });
 
+  // Highlight nav block
+
   let highlightedNavIndex = 0;
 
-  for (let i = 0; i < navSectionArr.length; i+= 1) {
-    const highlightedNavIndexDistanceFromTop = navSectionArr[highlightedNavIndex][0].getBoundingClientRect().top + navSectionArr[highlightedNavIndex][0].clientHeight;
-    const currentSectionDistanceFromTop = navSectionArr[i][0].getBoundingClientRect().top + navSectionArr[i][0].clientHeight;
-    if (highlightedNavIndexDistanceFromTop < 0 && currentSectionDistanceFromTop > 0) {
-      highlightedNavIndex = i; 
+  for (let i = 0; i < navSectionArr.length; i += 1) {
+    const HighlightedNav = navSectionArr[highlightedNavIndex];
+    const highlightedNavIndexDistanceFromTop =
+      HighlightedNav[0].getBoundingClientRect().top +
+      HighlightedNav[0].clientHeight;
+    const currentSectionDistanceFromTop =
+      navSectionArr[i][0].getBoundingClientRect().top +
+      navSectionArr[i][0].clientHeight;
+    if (
+      highlightedNavIndexDistanceFromTop < 0 &&
+      currentSectionDistanceFromTop > 0
+    ) {
+      highlightedNavIndex = i;
     }
     navSectionArr.forEach((el) => {
       el[1].classList.remove('active');
@@ -89,6 +106,5 @@ function checkIfElementIsInViewport() {
   }
 }
 
-
-document.addEventListener("scroll", checkIfElementIsInViewport);
+document.addEventListener('scroll', checkIfElementIsInViewport);
 checkIfElementIsInViewport();
