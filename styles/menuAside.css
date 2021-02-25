@@ -21,6 +21,10 @@
   margin: 10px;
 }
 
+.menuAside a.active {
+  color: orange;
+}
+
 .menuAside .switchContainer2 {
   margin-top: 10px;
   align-self: center;

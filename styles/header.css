@@ -71,6 +71,10 @@
   border-bottom: 3px solid rgb(110, 38, 204);
 }
 
+.headerNav a.active {
+  color: orange;
+}
+
 .menuButton {
   display: none;
   background-color: transparent;
