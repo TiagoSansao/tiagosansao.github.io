@@ -46,27 +46,40 @@ window.addEventListener("click", (event) => {
 const skills = document.querySelectorAll(".technology");
 const navItems = document.querySelectorAll(".headerNav>a")
 let navSectionObj = {};
+console.log(navSectionObj);
+
 navItems.forEach((element) => {
   const navHrefElement = document.querySelector(element.getAttribute("href"));
   navSectionObj[element.textContent] = {nav: element, section: navHrefElement};
 });
-console.log(navSectionObj);
+
+let before = [-1, null]
 
 function checkIfElementIsInViewport() {
   const windowHeight = window.innerHeight;
   const scrollY = window.scrollY || window.pageYOffset;
   const scrollPosition = scrollY + windowHeight;
+  let navItemsArray = ["Home", "Skills", "Projects", "Contact"]
+
   skills.forEach((element) => {
     const elPosition = element.getBoundingClientRect().top + scrollY  + element.clientHeight;
     if (scrollPosition > elPosition) {
       element.classList.add('animated');
     }
   });
-  for (let item in navSectionObj) {
-    const element = navSectionObj[item].section;
-    const elPosition = element.getBoundingClientRect().top + scrollY  + element.clientHeight;
-    if (scrollPosition > elPosition) {
 
+  for (let item in navSectionObj) {
+    const currentElement = navSectionObj[item];
+    const currentElementId = navItemsArray.indexOf(item);
+    const previousElement = navSectionObj[navItemsArray[currentElementId - 1]] || null;
+    if (previousElement) {
+      navSectionObj["Home"].nav.classList.remove('active');
+      if (previousElement.section.getBoundingClientRect().top < 0 && currentElement.section.getBoundingClientRect().top > 0) {
+        console.log(item);
+        console.log(previousElement.section.getBoundingClientRect().top);
+      }
+    } else {
+      navSectionObj["Home"].nav.classList.add('active');
     }
   }
 }
