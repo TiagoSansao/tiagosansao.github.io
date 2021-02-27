@@ -8,7 +8,6 @@
   max-width: 1000px;
   width: 100%;
   padding: 15px;
-  
 }
 
 /* Introduction */
@@ -41,7 +40,6 @@
   font-size: 1.22rem;
   font-family: 'Quicksand', sans-serif;
   font-weight: 400;
-
 }
 
 .photo {
@@ -60,7 +58,7 @@
   border-top: 1px solid rgb(53, 52, 52);
 }
 
-.skills h2 {
+.h2 {
   text-align: center;
   font-size: 2.5rem;
   margin-top: 20px;
@@ -76,7 +74,6 @@
 .skill h3 {
   color: rgb(14, 71, 226);
   font-size: 2rem;
-  
 }
 
 .technology {
@@ -109,5 +106,62 @@
 }
 
 @keyframes leftToRight {
-  0% { margin-left: -98% }
+  0% {
+    margin-left: -98%;
+  }
+}
+
+.grid-projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  row-gap: 50px;
+  column-gap: 50px;
+  place-items: center;
+  padding: 10px 50px 10px 50px;
+  margin-top: 20px;
+}
+
+#projects h2 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.project {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  position: relative;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+
+.project::after {
+  content: '';
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  border-radius: 10px;
+  display: none;
+}
+
+.project:hover::after {
+  display: block;
+}
+
+.project h3,
+.project button {
+  display: none;
+}
+
+.project img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.span2 {
+  grid-row: 2 / span 2;
 }
