@@ -114,6 +114,7 @@
 .grid-projects {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-rows: repeat(3, 300px);
   row-gap: 50px;
   column-gap: 50px;
   place-items: center;
@@ -138,28 +139,53 @@
 .project::after {
   content: '';
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.8);
   width: 100%;
   height: 100%;
   top: 0;
   border-radius: 10px;
-  display: none;
+  display: block;
+  opacity: 0;
+  transition: 300ms;
 }
 
 .project:hover::after {
-  display: block;
+  opacity: 1;
 }
 
-.project h3,
-.project button {
+.project:hover h3 {
+  display: flex;
+}
+
+.project h3 {
   display: none;
+  position: absolute;
+  color: white;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+}
+.project .info {
+  height: 8%;
+  display: flex;
+  justify-content: space-evenly;
+  color: orange;
 }
 
 .project img {
   width: 100%;
-  height: 100%;
+  height: 92%;
   object-fit: cover;
-  border-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.project img#ccimg {
+  height: 92%;
+  object-fit: contain;
 }
 
 .span2 {
