@@ -1,6 +1,7 @@
 .lMain {
   width: 100vw;
   display: flex;
+  position: relative;
   justify-content: center;
 }
 
@@ -8,6 +9,7 @@
   max-width: 1000px;
   width: 100%;
   padding: 15px;
+  position: relative;
 }
 
 /* Introduction */

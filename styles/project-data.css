@@ -1,0 +1,14 @@
+#project-data {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  height: inherit;
+  margin-top: 100px;
+  min-height: 300px;
+  height: 600px;
+  width: 90%;
+  max-width: 1000px;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  z-index: 30;
+}
