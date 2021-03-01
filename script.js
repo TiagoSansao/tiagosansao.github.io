@@ -108,3 +108,51 @@ function checkIfElementIsInViewport() {
 
 document.addEventListener('scroll', checkIfElementIsInViewport);
 checkIfElementIsInViewport();
+
+// Project info
+
+const projectsArr = document.querySelectorAll('.project');
+const projectDataEl = document.querySelector('#project-data');
+
+const projectData = [
+  {
+    title: 'DevForum',
+    about: 'A cool forum',
+    techs: 'Node.js',
+    showing: 'Very cool',
+  },
+  {
+    name: '',
+    about: '',
+    techs: '',
+    showing: '',
+  },
+  {
+    name: '',
+    about: '',
+    techs: '',
+    showing: '',
+  },
+  {
+    name: '',
+    about: '',
+    techs: '',
+    showing: '',
+  },
+];
+
+function getProjectHTML({ title, about, techs, showing }) {
+  return `
+    <h3>${title}</h3>
+    <p>${about}</p>
+    <p>${techs}</p>
+    <div>${showing}</div>
+  `;
+}
+
+projectsArr.forEach((project, index) => {
+  project.addEventListener('click', () => {
+    console.log(index);
+    projectDataEl.innerHTML = getProjectHTML(projectData[index]);
+  });
+});
