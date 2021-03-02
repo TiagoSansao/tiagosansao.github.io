@@ -40,8 +40,13 @@ closeButton.addEventListener('click', () => {
 });
 
 window.addEventListener('click', (event) => {
-  if (!event.target.matches('.menuButton')) {
+  console.log(!event.target.matches('.menuButton'));
+  if (
+    !event.target.matches('.menuButton') &&
+    !event.target.matches('.project')
+  ) {
     document.querySelector('.menuAside').classList.remove('open');
+    document.querySelector('#project-data').style.display = 'none';
     document.body.classList.remove('shadowed');
   }
 });
@@ -152,7 +157,8 @@ function getProjectHTML({ title, about, techs, showing }) {
 
 projectsArr.forEach((project, index) => {
   project.addEventListener('click', () => {
-    console.log(index);
     projectDataEl.innerHTML = getProjectHTML(projectData[index]);
+    document.body.classList.add('shadowed');
+    projectDataEl.style.display = 'block';
   });
 });
