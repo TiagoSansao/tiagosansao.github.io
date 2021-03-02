@@ -13,3 +13,7 @@
   z-index: 30;
   background-color: #1d1d1d;
 }
+
+#project-data h3 {
+  color: white;
+}
