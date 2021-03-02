@@ -10,10 +10,11 @@ closeButton.addEventListener('click', () => {
   document.body.classList.remove('shadowed');
 });
 
-window.addEventListener('click', (event) => {
+window.addEventListener('pointerdown', (event) => {
   if (
     !event.target.matches('.menuButton') &&
-    !event.target.matches('.project')
+    !event.target.matches('.project') &&
+    !event.target.matches('.project-data-el')
   ) {
     document.querySelector('.menuAside').classList.remove('open');
     document.querySelector('#project-data').style.display = 'none';

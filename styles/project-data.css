@@ -12,6 +12,8 @@
   background-color: white;
   z-index: 30;
   background-color: #1d1d1d;
+  overflow-y: scroll;
+  flex-direction: column;
 }
 
 #project-data h3 {
