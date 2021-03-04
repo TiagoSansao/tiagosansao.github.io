@@ -13,6 +13,7 @@
   z-index: 30;
   background-color: #1d1d1d;
   overflow-y: scroll;
+  overflow-x: hidden;
   flex-direction: column;
 }
 
@@ -38,5 +39,52 @@
   font-size: 2rem;
 }
 
+#project-data section {
+  display: flex;
+  flex-direction: row;
+  margin-top: 15px;
+  text-align: justify;
+}
+
 #project-data main {
+  flex-grow: 1;
+  padding: 15px;
+  width: 80%;
+}
+
+#project-data h4 {
+  font-size: 1.6rem;
+  color: rgb(14, 71, 226);
+}
+
+#project-data p {
+  margin-bottom: 15px;
+  color: white;
+  font-size: 1rem;
+  display: inline;
+}
+
+#project-data aside {
+  margin-left: 25px;
+}
+
+#project-data main a {
+  color: greenyellow;
+}
+
+#project-data main h5 {
+  font-size: 1.3rem;
+  color: orange;
+}
+
+#project-data main ul > ul > li {
+  margin-left: 20px;
+}
+
+#project-data main > ul {
+  list-style-type: none;
+}
+
+#project-data ul > ul {
+  list-style-type: disc;
 }

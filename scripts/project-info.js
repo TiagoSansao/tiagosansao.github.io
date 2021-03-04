@@ -5,7 +5,7 @@ const projectData = [
   {
     title: 'DevForum',
     about:
-      "DevForum is a complete web-application, I built the front-end using React that receives data from the back-end, a REST API built with Node.js, I chose MongoDB as the database due to the facility of integrating it with Node.js and managing it with Mongoose, for more technical information access the <a href='https://github.com/TiagoSansao/DevForum' target='_blank'>GitHub reposity.</a>",
+      "DevForum is a complete web-application, I built the front-end using React that receives data from the back-end, a REST API built with Node.js, I chose MongoDB as the database due to the facility of integrating it with Node.js and managing it with Mongoose, for more technical information access the <a class='project-data-el' href='https://github.com/TiagoSansao/DevForum' target='_blank'>GitHub repository.</a>",
     techs: {
       'Front-end': [
         ['React', 'https://reactjs.org/'],
@@ -63,7 +63,7 @@ function getProjectHTML({ title, about, techs, showing, github, site }) {
         ${techs[tech]
           .map((item) => {
             return `
-            <li class="project-data-el"><a class="project-data-el" href="${item[1]}">${item[0]}</a></li>
+            <li class="project-data-el"><a target="_blank" class="project-data-el" href="${item[1]}">${item[0]}</a></li>
           `;
           })
           .join('')}
@@ -74,7 +74,7 @@ function getProjectHTML({ title, about, techs, showing, github, site }) {
   techHTML += '</ul>';
 
   return `
-    <header>
+    <header class="project-data-el">
       <h3 class="project-data-el" >${title}</h3> <button class="closeButton">
       <svg class="close" version="1.1" fill="white" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 511.995 511.995"
@@ -101,24 +101,28 @@ function getProjectHTML({ title, about, techs, showing, github, site }) {
       </svg>
     </button>
     </header>
-    <main>
-      <h4>About</h4>
-      <p class="project-data-el" >${about}</p>
-      <h4>Used technologies</h4>
-      <p class="project-data-el" >${techHTML}</p>
-      <h4>Showcase</h4>
-      <div class="project-data-el"> ${showing} </div>
-      ${
-        site
-          ? `<a class="project-data-el"  target="_blank" href="${site}">Visit Site</a>`
-          : ''
-      }
-      ${
-        github
-          ? `<a class="project-data-el"  target="_blank" href="${github}">Visit GitHub</a>`
-          : ''
-      }
-    </main>
+    <section>
+      <main class="project-data-el">
+        <h4 class="project-data-el">About</h4>
+        <p class="project-data-el" >${about}</p>
+        <h4 class="project-data-el">Used technologies</h4>
+        <p class="project-data-el" >${techHTML}</p>
+        <h4 class="project-data-el">Showcase</h4>
+        <div class="project-data-el"> ${showing} </div>
+      </main>
+      <aside class="project-data-el">
+        ${
+          site
+            ? `<a class="project-data-el"  target="_blank" href="${site}">Visit Site</a>`
+            : ''
+        }
+        ${
+          github
+            ? `<a class="project-data-el"  target="_blank" href="${github}">Visit GitHub</a>`
+            : ''
+        }
+      </aside>
+    </section>
   `;
 }
 
