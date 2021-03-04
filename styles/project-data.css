@@ -16,6 +16,27 @@
   flex-direction: column;
 }
 
-#project-data h3 {
+#project-data header {
+  display: flex;
   color: white;
+  height: 60px;
+  width: 100%;
+}
+
+#project-data button {
+  margin-right: 15px;
+  width: 40px;
+}
+
+#project-data h3 {
+  flex-grow: 1;
+  text-align: center;
+  margin-left: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+}
+
+#project-data main {
 }

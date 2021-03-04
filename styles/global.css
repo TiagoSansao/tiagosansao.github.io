@@ -1,4 +1,6 @@
-html, body, * {
+html,
+body,
+* {
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
@@ -7,7 +9,7 @@ html, body, * {
 }
 
 html {
-  scroll-behavior:  smooth;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -44,22 +46,22 @@ body.dark {
 
   --headingFont: 'Bebas Neue', cursive;
 
-  background-color: #1D1D1D
+  background-color: #1d1d1d;
 }
 
 body::after {
-  content: "";
+  content: '';
   opacity: 0;
 }
 
 body.shadowed::after {
-  content: "";
+  content: '';
   top: 0px;
   left: 0px;
   width: 100%;
   height: 100%;
   position: fixed;
-  background-color: rgba(0,0,0,0.6);
+  background-color: rgba(0, 0, 0, 0.6);
   z-index: 20;
   transition-duration: 200ms;
   transition-property: opacity;
@@ -81,4 +83,3 @@ body.shadowed::after {
 ::-webkit-scrollbar-thumb {
   background-color: #393b3d;
 }
-
