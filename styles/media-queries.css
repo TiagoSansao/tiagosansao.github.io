@@ -51,6 +51,10 @@
   body {
     padding-top: 90px;
   }
+  #project-data section {
+    display: flex;
+    flex-direction: column !important;
+  }
 }
 
 @media (max-width: 500px) {
