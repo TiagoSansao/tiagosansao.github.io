@@ -63,11 +63,14 @@
   width: 160px;
   border-left: 1px solid rgb(58, 58, 58);
   height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 #project-data h4 {
   font-size: 1.6rem;
   color: rgb(14, 71, 226);
+  margin-bottom: 10px;
 }
 
 #project-data p {
@@ -119,6 +122,7 @@
 ._1 {
   margin-top: 35px;
   background-color: rgb(1, 88, 202);
+  order: 1;
 }
 
 ._1:hover {
@@ -128,6 +132,7 @@
 ._2 {
   margin-top: 10px;
   background-color: rgb(5, 151, 0);
+  order: 2;
 }
 
 ._2:hover {
@@ -141,4 +146,15 @@
 #project-data aside > a:hover {
   box-shadow: 5px 5px 25px black;
   transform: translateY(-7.5px) scale(1.05);
+}
+
+.showcaseContainer {
+  padding: 15px;
+}
+
+.showcase {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }

@@ -51,9 +51,22 @@
   body {
     padding-top: 90px;
   }
-  #project-data section {
+
+  #project-data section main {
+    width: 100%;
+  }
+  #project-data section aside {
+    margin-top: 15px;
+    height: 50px;
+    float: left;
+    width: 100%;
     display: flex;
-    flex-direction: column !important;
+    flex-direction: row;
+    justify-content: space-around;
+    border: 0;
+  }
+  #project-data section aside > a {
+    margin: 0;
   }
 }
 

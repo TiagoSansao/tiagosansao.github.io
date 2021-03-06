@@ -107,13 +107,11 @@ function getProjectHTML({ title, about, techs, showing, github, site }) {
         <p class="project-data-el" >${about}</p>
         <h4 class="project-data-el">Used technologies</h4>
         <p class="project-data-el" >${techHTML}</p>
-        <h4 class="project-data-el">Showcase</h4>
-        <div class="project-data-el"> ${showing} </div>
       </main>
       <aside class="project-data-el">
         ${
           site
-            ? `<a class="project-data-el _1"  target="_blank" href="${site}">
+            ? `<a class="project-data-el _2"  target="_blank" href="${site}">
               <svg class="i-svg" height="25" version="1.1" width="25" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" viewBox="0 0 50 50" space="preserve" data-icon="facebook,"><path d="M36.999,36.998H13V13.089L19,13V7h-12v35.998h35.998V27.999h-6V36.998z M25,7l6,6l-9,9l6,6l8.999-9l6,6V7H25z" fill="#ffffff"></path></svg>
               Visit Site
             </a>`
@@ -121,13 +119,18 @@ function getProjectHTML({ title, about, techs, showing, github, site }) {
         }
         ${
           github
-            ? `<a class="project-data-el  _2"  target="_blank" href="${github}"> 
+            ? `<a class="project-data-el  _1"  target="_blank" href="${github}"> 
               <svg class="i-svg" height="25" version="1.1" width="25" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" viewBox="0 0 50 50" space="preserve" data-icon="facebook,"><path d="M36.999,36.998H13V13.089L19,13V7h-12v35.998h35.998V27.999h-6V36.998z M25,7l6,6l-9,9l6,6l8.999-9l6,6V7H25z" fill="#ffffff"></path></svg>
               Visit GitHub</a>`
             : ''
         }
       </aside>
+      
     </section>
+    <div class="showcaseContainer">
+      <h4 class="project-data-el">Showcase</h4>
+      <div class="project-data-el showcase"> ${showing} </div>
+    </div>
   `;
 }
 
