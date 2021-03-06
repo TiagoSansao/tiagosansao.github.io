@@ -96,25 +96,49 @@
 
 #project-data ul > ul {
   list-style-type: disc;
+  color: white;
 }
 
 #project-data aside > a {
   width: 130px;
-  background-color: rgb(66, 151, 135);
   border-radius: 10px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  padding-left: 5px;
   align-items: center;
   height: 40px;
   color: white;
   text-transform: uppercase;
-  margin-top: 35px;
-  box-shadow: 5px 5px 5px black;
+  box-shadow: 1px 1px 3px black;
   font-family: 'Bebas Neue', cursive;
   font-weight: 100;
   font-size: 1.3rem;
+  transition-duration: 0.5s;
+}
+
+._1 {
+  margin-top: 35px;
+  background-color: rgb(1, 88, 202);
+}
+
+._1:hover {
+  background-color: rgb(0, 40, 173);
+}
+
+._2 {
+  margin-top: 10px;
+  background-color: rgb(5, 151, 0);
+}
+
+._2:hover {
+  background-color: rgb(24, 122, 0);
 }
 
 #project-data aside > a > svg {
   margin-right: 5px;
+}
+
+#project-data aside > a:hover {
+  box-shadow: 5px 5px 25px black;
+  transform: translateY(-7.5px) scale(1.05);
 }

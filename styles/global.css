@@ -6,6 +6,7 @@ body,
   padding: 0px;
   font-family: 'Quicksand', sans-serif;
   text-decoration: none;
+  text-shadow: 1px 1px 1px black;
 }
 
 html {
