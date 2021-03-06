@@ -75,7 +75,7 @@ function getProjectHTML({ title, about, techs, showing, github, site }) {
 
   return `
     <header class="project-data-el">
-      <h3 class="project-data-el" >${title}</h3> <button class="closeButton">
+      <h3 class="project-data-el" >${title}</h3> <button class="closeButton closeProject">
       <svg class="close" version="1.1" fill="white" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 511.995 511.995"
         style="enable-background:new 0 0 511.995 511.995;" xml:space="preserve">
@@ -118,7 +118,9 @@ function getProjectHTML({ title, about, techs, showing, github, site }) {
         }
         ${
           github
-            ? `<a class="project-data-el"  target="_blank" href="${github}">Visit GitHub</a>`
+            ? `<a class="project-data-el"  target="_blank" href="${github}"> 
+              <svg class="i-svg" height="25" version="1.1" width="25" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" viewBox="0 0 50 50" space="preserve" data-icon="facebook,"><path d="M36.999,36.998H13V13.089L19,13V7h-12v35.998h35.998V27.999h-6V36.998z M25,7l6,6l-9,9l6,6l8.999-9l6,6V7H25z" fill="#ffffff"></path></svg>
+              Visit GitHub</a>`
             : ''
         }
       </aside>

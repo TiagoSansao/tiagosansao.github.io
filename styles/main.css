@@ -157,17 +157,20 @@
 }
 
 .project:hover h3 {
-  display: flex;
+  display: block;
 }
 
 .project h3 {
   display: none;
   position: absolute;
   color: white;
-  top: 0px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   justify-content: center;
   align-items: center;
   z-index: 3;
+  font-size: 1.3rem;
 }
 .project .info {
   height: 10%;
