@@ -115,7 +115,7 @@
 
 .grid-projects {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   grid-template-rows: repeat(3, 300px);
   row-gap: 50px;
   column-gap: 50px;

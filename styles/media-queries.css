@@ -118,6 +118,10 @@
   .technology h4 {
     margin-left: 40px;
   }
+
+  .grid-projects {
+    padding: 10px 15px 10px 15px;
+  }
 }
 
 @media (max-width: 370px) {
