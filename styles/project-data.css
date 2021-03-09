@@ -37,7 +37,6 @@
 #project-data h3 {
   flex-grow: 1;
   text-align: center;
-  margin-left: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -156,5 +155,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+}
+
+.showcaseContainer .img-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  column-gap: 10px;
+  width: 100%;
+  justify-items: center;
+}
+
+.showcaseContainer .img-container img {
+  border-radius: 10px;
   width: 100%;
 }

@@ -28,25 +28,69 @@ const projectData = [
     site: '',
   },
   {
-    name: '',
+    title: 'Case Converter',
+    about:
+      "Case Converter is a cross-platform mobile application, its purpose is very simple and more than seventy people have downloaded it so far from the Google Play Store. I built it using React Native and Expo and you can download it in Android devices from <a class='project-data-el' href='https://play.google.com/store/apps/details?id=com.tiagosansao.convertcase' target='_blank'>Play Store.</a> ",
+    techs: {
+      Mobile: [
+        ['React', 'https://reactjs.org/'],
+        ['React Native', 'https://reactnative.dev/'],
+        ['Expo', 'https://expo.io/'],
+      ],
+    },
+    showing:
+      ' <div class="project-data-el img-container"> <img class="project-data-el" src="./assets/projects/case-converter/1.jpeg" alt="Case Converter 1" /> <img class="project-data-el" src="./assets/projects/case-converter/3.jpeg" alt="Case Converter 3" />  </div>',
+    github: 'https://github.com/TiagoSansao/Case-Converter',
+    site:
+      'https://play.google.com/store/apps/details?id=com.tiagosansao.convertcase',
+  },
+  {
+    title: '',
     about: '',
-    techs: '',
+    techs: {
+      '': [
+        ['', ''],
+        ['', ''],
+      ],
+      '': [
+        ['', ''],
+        ['', ''],
+      ],
+    },
     showing: '',
     github: '',
     site: '',
   },
   {
-    name: '',
+    title: '',
     about: '',
-    techs: '',
+    techs: {
+      '': [
+        ['', ''],
+        ['', ''],
+      ],
+      '': [
+        ['', ''],
+        ['', ''],
+      ],
+    },
     showing: '',
     github: '',
     site: '',
   },
   {
-    name: '',
+    title: '',
     about: '',
-    techs: '',
+    techs: {
+      '': [
+        ['', ''],
+        ['', ''],
+      ],
+      '': [
+        ['', ''],
+        ['', ''],
+      ],
+    },
     showing: '',
     github: '',
     site: '',

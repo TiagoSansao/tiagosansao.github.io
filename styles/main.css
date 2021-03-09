@@ -199,3 +199,7 @@
 .span2 {
   grid-row: 2 / span 2;
 }
+
+.project img.full {
+  object-fit: contain;
+}

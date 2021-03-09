@@ -122,6 +122,10 @@
   .grid-projects {
     padding: 10px 15px 10px 15px;
   }
+
+  #project-data h3 {
+    margin-right: 30px;
+  }
 }
 
 @media (max-width: 370px) {
@@ -137,5 +141,9 @@
   .headingContainer h2 {
     font-size: 1.15rem;
     margin-top: -7px;
+  }
+
+  #project-data h3 {
+    font-size: 1.3rem;
   }
 }
