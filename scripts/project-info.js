@@ -20,6 +20,7 @@ const projectData = [
         ['JsonWebToken', 'https://www.npmjs.com/package/jsonwebtoken'],
         ['Multer', 'https://www.npmjs.com/package/multer'],
         ['Mongoose', 'https://mongoosejs.com/'],
+        ['MongoDB', 'https://www.mongodb.com/'],
       ],
     },
     showing:
@@ -45,21 +46,22 @@ const projectData = [
       'https://play.google.com/store/apps/details?id=com.tiagosansao.convertcase',
   },
   {
-    title: '',
-    about: '',
+    title: 'Heimerdinger Bot',
+    about:
+      'Heimerdinger Bot is League of Legends for Discord, it gets data from the official Riot Games API and websites that are web crawled, it supports two languages so far (English and Brazilian-Portuguese), I built it using Express and Discord.js.',
     techs: {
-      '': [
-        ['', ''],
-        ['', ''],
-      ],
-      '': [
-        ['', ''],
-        ['', ''],
+      'Back-end': [
+        ['node-html-parser', 'https://www.npmjs.com/package/node-html-parser'],
+        ['Discord.js', 'https://discord.js.org/#/'],
+        ['Axios', 'https://github.com/axios/axios'],
+        ['Mongoose', 'https://mongoosejs.com/'],
+        ['MongoDB', 'https://www.mongodb.com/'],
       ],
     },
-    showing: '',
-    github: '',
-    site: '',
+    showing:
+      '<div class="project-data-el img-container"> <img class="project-data-el" src="./assets/projects/heimerdinger-bot/1.png" alt="Heimerdinger-Bot 1" /> <img class="project-data-el" src="./assets/projects/heimerdinger-bot/2.png" alt="Heimerdinger - Bot 2" />  </div>',
+    github: 'https://github.com/TiagoSansao/heimerdinger-discord-bot/',
+    site: 'https://heimerdingerbot.github.io/',
   },
   {
     title: '',
