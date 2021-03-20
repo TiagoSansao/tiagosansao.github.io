@@ -75,7 +75,8 @@ const projectData = [
         ['TypeScript', 'https://www.typescriptlang.org/'],
       ],
     },
-    showing: '',
+    showing:
+      '<div class="project-data-el img-container"> <img class="project-data-el" src="./assets/projects/vocenaosabia/1.png" alt="Heimerdinger-Bot 1" /> </div>',
     github: 'https://github.com/TiagoSansao/voce-nao-sabia',
     site: 'https://vocenaosabia.vercel.app/',
   },
