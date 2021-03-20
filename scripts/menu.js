@@ -10,15 +10,22 @@ closeButton.addEventListener('click', () => {
   document.body.classList.remove('shadowed');
 });
 
+function reset() {
+  document.querySelector('.menuAside').classList.remove('open');
+  document.querySelector('#project-data').style.display = 'none';
+  document.body.classList.remove('shadowed');
+}
+
 window.addEventListener('pointerdown', (event) => {
-  if (
+  if (event.target.matches('.menuLink')) {
+    return setTimeout(() => {
+      reset();
+    }, 300);
+  } else if (
     !event.target.matches('.menuButton') &&
     !event.target.matches('.project') &&
-    !event.target.matches('.project-data-el') &&
-    !event.target.matches('.menuLink')
+    !event.target.matches('.project-data-el')
   ) {
-    document.querySelector('.menuAside').classList.remove('open');
-    document.querySelector('#project-data').style.display = 'none';
-    document.body.classList.remove('shadowed');
+    reset();
   }
 });
