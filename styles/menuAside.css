@@ -13,7 +13,18 @@
   animation-duration: 200ms;
 }
 
-.menuAside a {
+.socialnetworks {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.social-media-icon {
+  width: 25px;
+  margin: 0px 5px 0px 5px;
+}
+
+.menuAside .menuLink {
   padding: 3px;
   margin: 5px 0px 5px;
   border-bottom: 1px solid gray;
@@ -78,6 +89,10 @@ span .off {
 }
 
 @keyframes show {
-  from {right: -200px}
-  to {right: 0px}
+  from {
+    right: -200px;
+  }
+  to {
+    right: 0px;
+  }
 }

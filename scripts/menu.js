@@ -24,7 +24,11 @@ window.addEventListener('pointerdown', (event) => {
   } else if (
     !event.target.matches('.menuButton') &&
     !event.target.matches('.project') &&
-    !event.target.matches('.project-data-el')
+    !event.target.matches('.project-data-el') &&
+    !event.target.matches('.social-media-icon') &&
+    !event.target.matches('.darkEl') &&
+    !event.target.matches('button') &&
+    !event.target.matches('a')
   ) {
     reset();
   }
