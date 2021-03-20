@@ -161,6 +161,7 @@
 .showcaseContainer .img-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  row-gap: 10px;
   column-gap: 10px;
   width: 100%;
   justify-items: center;

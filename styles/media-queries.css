@@ -126,6 +126,11 @@
   #project-data h3 {
     margin-right: 30px;
   }
+
+  #project-data {
+    margin-top: 75px;
+    height: calc(95% - 75px);
+  }
 }
 
 @media (max-width: 370px) {
@@ -145,5 +150,11 @@
 
   #project-data h3 {
     font-size: 1.3rem;
+  }
+
+  #project-data aside > a {
+    width: 115px;
+    height: 40px;
+    font-size: 1.2rem;
   }
 }
