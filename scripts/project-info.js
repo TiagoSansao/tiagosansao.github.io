@@ -31,7 +31,7 @@ const projectData = [
   {
     title: 'Case Converter',
     about:
-      "Case Converter is a cross-platform mobile application, its purpose is very simple and more than seventy people have downloaded it so far from the Google Play Store. I built it using React Native and Expo and you can download it in Android devices from <a class='project-data-el' href='https://play.google.com/store/apps/details?id=com.tiagosansao.convertcase' target='_blank'>Play Store.</a> ",
+      "Case Converter is a cross-platform mobile application, its purpose is very simple and more than seventy people have downloaded it so far from the Google Play Store. I built it using React Native and Expo and you can download it on Android devices from <a class='project-data-el' href='https://play.google.com/store/apps/details?id=com.tiagosansao.convertcase' target='_blank'>Play Store.</a> ",
     techs: {
       Mobile: [
         ['React', 'https://reactjs.org/'],
@@ -66,7 +66,7 @@ const projectData = [
   {
     title: 'Você não Sabia',
     about:
-      "Você não Sabia can be translated to You didn't Know, it's a curiosity progressive-web-application site developed with TypeScript, Next.js and deployed at Vercel, unfortunately this project is only available in Brazilian Portuguese.",
+      "Você não Sabia can be translated to You didn't Know, it's a curiosity progressive-web-application site developed with TypeScript, Next.js and deployed at Vercel. Unfortunately, this project is only available in Brazilian Portuguese.",
     techs: {
       'Front-end': [
         ['React', 'https://reactjs.org/'],
