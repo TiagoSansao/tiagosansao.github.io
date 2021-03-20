@@ -14,7 +14,8 @@ window.addEventListener('pointerdown', (event) => {
   if (
     !event.target.matches('.menuButton') &&
     !event.target.matches('.project') &&
-    !event.target.matches('.project-data-el')
+    !event.target.matches('.project-data-el') &&
+    !event.target.matches('.menuLink')
   ) {
     document.querySelector('.menuAside').classList.remove('open');
     document.querySelector('#project-data').style.display = 'none';
