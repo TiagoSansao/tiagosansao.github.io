@@ -64,21 +64,20 @@ const projectData = [
     site: 'https://heimerdingerbot.github.io/',
   },
   {
-    title: '',
-    about: '',
+    title: 'Você não Sabia',
+    about:
+      "Você não Sabia can be translated to You didn't Know, it's a curiosity progressive-web-application site developed with TypeScript, Next.js and deployed at Vercel, unfortunately this project is only available in Brazilian Portuguese.",
     techs: {
-      '': [
-        ['', ''],
-        ['', ''],
-      ],
-      '': [
-        ['', ''],
-        ['', ''],
+      'Front-end': [
+        ['React', 'https://reactjs.org/'],
+        ['Next.js', 'https://nextjs.org/'],
+        ['Font Awesome', 'https://fontawesome.com/'],
+        ['TypeScript', 'https://www.typescriptlang.org/'],
       ],
     },
     showing: '',
-    github: '',
-    site: '',
+    github: 'https://github.com/TiagoSansao/voce-nao-sabia',
+    site: 'https://vocenaosabia.vercel.app/',
   },
   {
     title: '',
