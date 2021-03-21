@@ -116,7 +116,7 @@
 .grid-projects {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  grid-template-rows: repeat(3, 300px);
+  grid-template-rows: repeat(auto-fit, 300px);
   row-gap: 50px;
   column-gap: 50px;
   place-items: center;
@@ -202,4 +202,41 @@
 
 .project img.full {
   object-fit: contain;
+}
+
+#contact header {
+  display: flex;
+}
+
+#contact header img {
+  width: 60px;
+  margin-right: 15px;
+}
+
+#contact p {
+  color: var(--p-color);
+  font-size: 1.22rem;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400;
+}
+
+.email {
+  color: #ffa500;
+}
+
+.socialmedias-contact {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.socialmedias-contact a {
+  margin-right: 15px;
+  background-color: blue;
+  width: 120px;
+  height: 40px;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 3px;
+  margin-top: 15px;
 }
