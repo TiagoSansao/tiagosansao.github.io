@@ -6,7 +6,6 @@ body,
   padding: 0px;
   font-family: 'Quicksand', sans-serif;
   text-decoration: none;
-  text-shadow: 1px 1px 1px black;
 }
 
 html {
@@ -23,15 +22,19 @@ body.light {
   --h2: white;
   --nav: rgb(219, 219, 219);
   --header: rgb(135, 92, 255);
+  --footer: rgb(109, 59, 245);
   --p-color: black;
   --menu-color: white;
-  --secondary-bg: #929292;
-  --frame: rgb(78, 78, 78);
-  --menu-bg-color: #252a34;
+  --secondary-bg: rgb(102, 92, 252);
+  --frame: rgb(82, 70, 252);
+  --menu-bg-color: #441fe7;
+  --skills-heading-color: rgb(69, 116, 0);
 
   --headingFont: 'Bebas Neue', cursive;
 
-  background-color: white;
+  font-weight: 600;
+
+  background-color: #dee5e7;
 }
 
 body.dark {
@@ -45,9 +48,11 @@ body.dark {
   --secondary-bg: #4b09a0;
   --frame: #5206b4;
   --menu-bg-color: #252a34;
+  --skills-heading-color: greenyellow;
 
   --headingFont: 'Bebas Neue', cursive;
 
+  text-shadow: 1px 1px 1px black;
   background-color: #1d1d1d;
 }
 
