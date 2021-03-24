@@ -38,6 +38,9 @@ function checkIfElementIsInViewport() {
     const highlightedNavIndexDistanceFromTop =
       HighlightedNav[0].getBoundingClientRect().top +
       HighlightedNav[0].clientHeight;
+    const lastElementDistanceFromTop =
+      navSectionArr[navSectionArr.length - 1][0].getBoundingClientRect().top +
+      navSectionArr[navSectionArr.length - 1][0].clientHeight;
     const currentSectionDistanceFromTop =
       navSectionArr[i][0].getBoundingClientRect().top +
       navSectionArr[i][0].clientHeight;
@@ -46,6 +49,9 @@ function checkIfElementIsInViewport() {
       currentSectionDistanceFromTop > 0
     ) {
       highlightedNavIndex = i;
+    }
+    if (lastElementDistanceFromTop < windowHeight) {
+      highlightedNavIndex = navSectionArr.length - 1;
     }
     navSectionArr.forEach((el) => {
       el[1].classList.remove('active');
