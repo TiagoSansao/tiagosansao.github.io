@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   width: 100%;
-  background-color: var(--header);
+  background-color: var(--footer);
   box-shadow: 0px 1px 5px black;
 }
 
@@ -15,4 +15,14 @@
   height: 100px;
   align-items: center;
   justify-content: space-between;
+}
+
+#footer p {
+  width: 100%;
+  color: white;
+  text-align: center;
+}
+
+#footer a {
+  color: greenyellow;
 }
