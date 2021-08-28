@@ -33,7 +33,6 @@ for (let i = 1; i <= 3; i += 1) {
     if (songController.currentSong === songs.length - 1) {
       songController.restart();
       songController.currentSong = 1;
-      console.log('deu restart');
     } else {
       songController.currentSong += 1;
     }

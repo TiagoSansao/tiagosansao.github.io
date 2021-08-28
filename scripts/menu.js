@@ -16,7 +16,7 @@ function reset() {
   document.body.classList.remove('shadowed');
 }
 
-window.addEventListener('pointerdown', (event) => {
+window.addEventListener("click", (event) => {
   if (event.target.matches('.menuLink')) {
     return setTimeout(() => {
       reset();

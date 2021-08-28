@@ -1,9 +1,10 @@
 <!doctype html>
 <html lang="en-US">
 
-<!--To do
-      
-
+<!-- TODO
+  Close button is overflowing (projects) ( )
+  Clicking at close button is reopening the project if the cursor is on both of them ( )
+  Closing sidebar menu is reopening itself ( )  
 -->
 
 <head>
@@ -22,11 +23,12 @@
   <link href="./styles/media-queries.css" rel="stylesheet" type="text/css" />
 
   <script defer src="./scripts/animate.js"></script>
-  <script defer src="./scripts/dark-mode.js"></script>
   <script defer src="./scripts/menu.js"></script>
+  <script defer src="./scripts/song-controller.js"></script>
   <script defer src="./scripts/project-info.js"></script>
   <script defer src="./scripts/dynamic-data.js"></script>
 
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" />
   <link rel="preconnect" href="https://fonts.gstatic.com" />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Quicksand:wght@400;600&display=swap"
     rel="stylesheet" />
@@ -40,7 +42,7 @@
   <link rel="apple-touch-icon" sizes="144x144" href="./assets/favicon/apple-icon-144x144.png">
   <link rel="apple-touch-icon" sizes="152x152" href="./assets/favicon/apple-icon-152x152.png">
   <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192"  href="./assets/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="./assets/favicon/android-icon-192x192.png">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="96x96" href="./assets/favicon/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
@@ -52,11 +54,17 @@
 </head>
 
 <body class="dark">
-  
+
   <nav class="menuAside">
     <header class="menuHeader">
       <section class="socialnetworks">
-        <a target="_blank" href="https://github.com/TiagoSansao"><img src="./assets/socialmedias/github.svg" alt="" class="social-media-icon"></a><a target="_blank" href="https://www.linkedin.com/in/tiago-schulz-sans%C3%A3o-9283351b7/"><img src="./assets/socialmedias/linkedin.svg" alt="" class="social-media-icon"></a><a target="_blank" href="https://www.instagram.com/tiagossansao/"><img src="./assets/socialmedias/instagram.svg" alt="" class="social-media-icon"></a><a target="_blank" href="https://twitter.com/tiagosansaodev"><img src="./assets/socialmedias/twitter.svg" alt="" class="social-media-icon"></a>
+        <a target="_blank" href="https://github.com/TiagoSansao"><img src="./assets/socialmedias/github.svg" alt=""
+            class="social-media-icon"></a><a target="_blank"
+          href="https://www.linkedin.com/in/tiago-schulz-sans%C3%A3o-9283351b7/"><img
+            src="./assets/socialmedias/linkedin.svg" alt="" class="social-media-icon"></a><a target="_blank"
+          href="https://www.instagram.com/tiagossansao/"><img src="./assets/socialmedias/instagram.svg" alt=""
+            class="social-media-icon"></a><a target="_blank" href="https://twitter.com/tiagosansaodev"><img
+            src="./assets/socialmedias/twitter.svg" alt="" class="social-media-icon"></a>
       </section>
       <button class="closeButton">
         <svg class="close" version="1.1" fill="white" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
@@ -84,10 +92,10 @@
         </svg>
       </button>
     </header>
-    <a class="active menuLink" href="#introduction">Home</a>
-    <a class="menuLink" href="#skills">Skills</a>
-    <a class="menuLink" href="#projects">Projects</a>
-    <a class="menuLink" href="#contact">Contact</a>
+    <a class="active menuLink" href="#introduction"><i class="fas fa-home icon"></i>&nbsp;Home</a>
+    <a class="menuLink" href="#skills"><i class="fas fa-lightbulb"></i>&nbsp;Skills</a>
+    <a class="menuLink" href="#projects"><i class="fas fa-folder"></i>&nbsp;Projects</a>
+    <a class="menuLink" href="#contact"><i class="far fa-address-card"></i>&nbsp;Contact</a>
     <div class="switchContainer2 darkEl">
       <label for="checkbox2" class="switchLabel darkEl">
         <input type="checkbox" class="checkbox darkEl" id="checkbox2">
@@ -117,10 +125,10 @@
               d="m368 277.332031h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0" />
           </svg>
         </button>
-        <a class="active" href="#introduction">Home</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+        <a class="active" href="#introduction"><i class="fas fa-home icon"></i>&nbsp;Home</a>
+        <a href="#skills"><i class="fas fa-lightbulb"></i>&nbsp;Skills</a>
+        <a href="#projects"><i class="fas fa-folder"></i>&nbsp;Projects</a>
+        <a href="#contact"><i class="far fa-address-card"></i>&nbsp;Contact</a>
       </nav>
       <div class="switchContainer">
         <label for="checkbox" class="switchLabel">
@@ -178,8 +186,9 @@
             <img src="./assets/technologies/css3.svg" alt="CSS3" />
             <div class="text">
               <h4>CSS3</h4>
-              <p>Cascading Style Sheets composes the visual part of my websites, I use it to develop beautiful and
-                accessible designs in order to provide a good user experience. </p>
+              <p>Cascading Style Sheets composes the visual part of my websites, I use it to develop beautiful,
+                responsive and accessible designs in order to provide a good user experience. Do you doubt it? Resize
+                your browser and check it! </p>
             </div>
           </article>
           <article class="technology">
@@ -260,7 +269,8 @@
             <img src="./assets/technologies/visualstudiocode.svg" alt="VSCode" />
             <div class="text">
               <h4>IDE: Visual Studio Code</h4>
-              <p>VSCode is where I reach my maximum productivity due to incredible extensions, shortcuts, HTML emmet, and
+              <p>VSCode is where I reach my maximum productivity due to incredible extensions, shortcuts, HTML emmet,
+                and
                 my loved Dracula theme.</p>
             </div>
           </article>
@@ -301,16 +311,16 @@
             <div>
               <h3>DevForum</h3>
               <p></p>
-              
+
             </div>
           </article>
-          <article class="project" >
+          <article class="project">
             <header class="info"><span>Mobile</span><span>Front-end</span></header>
             <img class="full" src="./assets/projects/caseconverter.png" alt="">
             <div>
               <h3>Case Converter</h3>
               <p></p>
-              
+
             </div>
           </article>
           <article class="project">
@@ -319,7 +329,7 @@
             <div>
               <h3>Heimerdinger Bot</h3>
               <p></p>
-              
+
             </div>
           </article>
           <article class="project">
@@ -328,7 +338,7 @@
             <div>
               <h3>Você não Sabia</h3>
               <p></p>
-              
+
             </div>
           </article>
         </div>
@@ -338,13 +348,22 @@
         <main>
           <section class="h3Sec">
             <h3>Get in touch</h3>
-            <p>Send an email to <span class="email">tiagossansao@gmail.com</span> if you want to talk, I'll reply to it as soon as I can. </p>
+            <p>Send an email to <span class="email">tiagossansao@gmail.com</span> if you want to talk, I'll reply to it
+              as soon as I can. </p>
           </section>
           <section class="h3Sec">
             <h3>Social medias</h3>
             <p>Follow my social medias and send me a hi if you want. </p>
             <section class="socialmedias-contact">
-              <a style="background-color: #181717;" target="_blank" href="https://github.com/TiagoSansao"><img src="./assets/contact/github.svg" alt="" class="social-media-icon"><span>GitHub</span></a><a style="background-color: #0A66C2;" target="_blank" href="https://www.linkedin.com/in/tiago-schulz-sans%C3%A3o-9283351b7/"><img src="./assets/contact/linkedin.svg" alt="" class="social-media-icon"><span>LinkedIn</span></a><a style="background-color: #E4405F;" target="_blank" href="https://www.instagram.com/tiagossansao/"><img src="./assets/contact/instagram.svg" alt="" class="social-media-icon"><span>Instagram</span></a><a style="background-color: #1DA1F2;" target="_blank" href="https://twitter.com/tiagosansaodev"><img src="./assets/contact/twitter.svg" alt="" class="social-media-icon"><span>Twitter</span></a>
+              <a style="background-color: #181717;" target="_blank" href="https://github.com/TiagoSansao"><img
+                  src="./assets/contact/github.svg" alt="" class="social-media-icon"><span>GitHub</span></a><a
+                style="background-color: #0A66C2;" target="_blank"
+                href="https://www.linkedin.com/in/tiago-schulz-sans%C3%A3o-9283351b7/"><img
+                  src="./assets/contact/linkedin.svg" alt="" class="social-media-icon"><span>LinkedIn</span></a><a
+                style="background-color: #E4405F;" target="_blank" href="https://www.instagram.com/tiagossansao/"><img
+                  src="./assets/contact/instagram.svg" alt="" class="social-media-icon"><span>Instagram</span></a><a
+                style="background-color: #1DA1F2;" target="_blank" href="https://twitter.com/tiagosansaodev"><img
+                  src="./assets/contact/twitter.svg" alt="" class="social-media-icon"><span>Twitter</span></a>
             </section>
           </section>
         </main>
@@ -353,7 +372,8 @@
   </div>
   <footer id="lFooter">
     <main id="footer">
-      <p>Copyright <time datetime="2020-00-00">2020</time> - <time datetime="" id="currentYearEl"></time> &copy; <a href="/">Tiago Schulz Sansão</a>  </p>
+      <p>Copyright <time datetime="2020-00-00">2020</time> - <time datetime="" id="currentYearEl"></time> &copy; <a
+          href="/">Tiago Schulz Sansão</a> </p>
     </main>
   </footer>
 </body>
