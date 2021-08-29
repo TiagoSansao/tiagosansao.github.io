@@ -65,6 +65,7 @@
   font-family: 'Quicksand', sans-serif;
   transition: margin 500ms;
   text-shadow: 1px 1px 1px black;
+  font-size: 1.3rem;
 }
 
 .headerNav a:hover {
